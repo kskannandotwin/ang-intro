@@ -10,20 +10,25 @@ export class AppComponent implements AfterViewInit {
   title = 'ang-intro';
   parentMessage: string = 'Message changed';
   message: string | undefined;
+  fromChildOutput: string | undefined;
 
   @ViewChild(PostComponent) childComp: any;
 
   // if you didn't use ChangeDetectorRef, face error in console.
   constructor(private cdr: ChangeDetectorRef) {
-    console.log(this.childComp);
-
+    // console.log(this.childComp);
   }
 
   ngAfterViewInit() {
-    console.log(this.childComp);
-    console.log(this.childComp.childMessage);
+    // console.log(this.childComp);
+    // console.log(this.childComp.childMessage);
     
     this.message = this.childComp.childMessage;
     this.cdr.detectChanges();
+  }
+
+  receiveMessage($event: any) {
+    // console.log($event);
+    this.fromChildOutput = $event;    
   }
 }
