@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-post',
@@ -6,11 +6,5 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./post.component.css']
 })
 export class PostComponent {
-  post: string = 'post works!';
 
-  @Input() fromParent: string | undefined;
-
-  postParentMessage: string = 'Message coming from the post parent';
-
-  childMessage: string = 'From child component';
 }
