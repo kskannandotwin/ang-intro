@@ -8,4 +8,5 @@ import { PostComponent } from './post/post.component';
 })
 export class AppComponent {
   title = 'ang-intro';
+  parentMessage: string = 'Message changed';
 }
