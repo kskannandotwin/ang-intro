@@ -9,4 +9,6 @@ export class PostComponent {
   @Input() fromParent: string | undefined;
 
   postParentMessage: string = 'Message coming from the post parent';
+
+  childMessage: string = 'From Child Component';
 }

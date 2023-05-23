@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, AfterViewInit, ChangeDetectorRef } from '@angular/core';
 import { PostComponent } from './post/post.component';
 
 @Component({
@@ -6,7 +6,24 @@ import { PostComponent } from './post/post.component';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements AfterViewInit {
   title = 'ang-intro';
   parentMessage: string = 'Message changed';
+  message: string | undefined;
+
+  @ViewChild(PostComponent) childComp: any;
+
+  // if you didn't use ChangeDetectorRef, face error in console.
+  constructor(private cdr: ChangeDetectorRef) {
+    console.log(this.childComp);
+
+  }
+
+  ngAfterViewInit() {
+    console.log(this.childComp);
+    console.log(this.childComp.childMessage);
+    
+    this.message = this.childComp.childMessage;
+    this.cdr.detectChanges();
+  }
 }
