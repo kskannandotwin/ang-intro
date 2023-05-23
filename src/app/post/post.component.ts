@@ -7,4 +7,6 @@ import { Component, Input } from '@angular/core';
 })
 export class PostComponent {
   @Input() fromParent: string | undefined;
+
+  postParentMessage: string = 'Message coming from the post parent';
 }
