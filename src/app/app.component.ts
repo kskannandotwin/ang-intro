@@ -14,7 +14,7 @@ export class AppComponent {
     console.log('Button click event worked');
   }
 
-  onKeyup() {
-    console.log('Enter key pressed');
+  onKeyup(username: any) {
+    console.log(username);
   }
 }

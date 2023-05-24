@@ -5,5 +5,5 @@
 <button (click)="buttonClick()">click me</button>
 
 <!-- event filtering -->
-<input type="text" (keyup.enter)="onKeyup()">
+<input type="text" (keyup.enter)="onKeyup(username.value)" #username>
 
