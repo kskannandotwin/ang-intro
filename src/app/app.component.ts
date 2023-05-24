@@ -9,7 +9,8 @@ import { PostComponent } from './post/post.component';
 export class AppComponent implements AfterViewInit {
   title = 'ang-intro';
   parentMessage: string = 'Message changed';
-  message: string | undefined;
+  // message: string | undefined;
+  message: string = 'Message from typescript component file';
   fromChildOutput: string | undefined;
 
   @ViewChild(PostComponent) childComp: any;
