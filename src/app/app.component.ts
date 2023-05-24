@@ -10,12 +10,13 @@ export class AppComponent {
   title = 'ang-intro';
   bool: boolean = true;
   userName: string | undefined;
+  textValue: string = 'Value coming from the component';
 
   buttonClick() {
     console.log('Button click event worked');
   }
 
   onKeyup() {
-    console.log(this.userName);
+    console.log(this.textValue);
   }
 }

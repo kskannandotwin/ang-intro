@@ -9,3 +9,8 @@
 
 <input type="text" [(ngModel)]="userName" (keyup.enter)="onKeyup()">
 
+<!-- one way vs two way data binding -->
+<input type="text" [value]="textValue" (keyup.enter)="onKeyup()">
+
+<input type="text" [(ngModel)]="textValue" (keyup.enter)="onKeyup()">
+
