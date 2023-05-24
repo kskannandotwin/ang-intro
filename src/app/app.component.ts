@@ -9,12 +9,13 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'ang-intro';
   bool: boolean = true;
+  userName: string | undefined;
 
   buttonClick() {
     console.log('Button click event worked');
   }
 
-  onKeyup(username: any) {
-    console.log(username);
+  onKeyup() {
+    console.log(this.userName);
   }
 }
