@@ -13,6 +13,7 @@ export class AppComponent implements AfterViewInit {
   message: string = 'Message from typescript component file';
   imgUrl: string = 'https://smaller-pictures.appspot.com/images/dreamstime_xxl_65780868_small.jpg';
   fromChildOutput: string | undefined;
+  bool: boolean = false;
 
   @ViewChild(PostComponent) childComp: any;
 
