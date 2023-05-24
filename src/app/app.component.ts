@@ -12,6 +12,9 @@ export class AppComponent {
 
   buttonClick() {
     console.log('Button click event worked');
-    
+  }
+
+  onKeyup() {
+    console.log('Enter key pressed');
   }
 }
