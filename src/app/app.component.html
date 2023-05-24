@@ -4,3 +4,7 @@
 <app-post [fromParent]="parentMessage" (messageEvent)="receiveMessage($event)"></app-post>
 <p>{{ fromChildOutput }}</p> -->
 <p>{{ message }}</p>
+
+<!-- property binding -->
+<img src="{{ imgUrl }}" alt="Image">
+<img [src]="imgUrl" alt="Image">

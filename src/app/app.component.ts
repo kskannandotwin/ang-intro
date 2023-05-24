@@ -11,6 +11,7 @@ export class AppComponent implements AfterViewInit {
   parentMessage: string = 'Message changed';
   // message: string | undefined;
   message: string = 'Message from typescript component file';
+  imgUrl: string = 'https://smaller-pictures.appspot.com/images/dreamstime_xxl_65780868_small.jpg';
   fromChildOutput: string | undefined;
 
   @ViewChild(PostComponent) childComp: any;
