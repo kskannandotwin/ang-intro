@@ -7,9 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  postTitle: string | undefined;
-  postDetails: string | undefined;
-  imageUrl: string | undefined;
-  postUrl: string | undefined;
-  addBackground: boolean | undefined;
+  postArray: Array<string> = ['Post 1', 'Post 2', 'Post 3', 'Post 4', 'Post 5'];
+
+  constructor() {
+    for (let i = 0; i < this.postArray.length; i++) {
+      console.log(this.postArray[i]);      
+    }
+  }
 }

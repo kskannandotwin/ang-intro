@@ -1,20 +1,12 @@
-<div class="form-area">
-    <h1>Post Form</h1>
-    <br><br>
-    <input type="text" placeholder="Post Title" [(ngModel)]="postTitle">
-    <br><br>
-    <textarea cols="30" rows="10" placeholder="Post Details" [(ngModel)]="postDetails"></textarea>
-    <br><br>
-    <input type="text" placeholder="Post Image URL" [(ngModel)]="imageUrl">
-    <br><br>
-    <input type="text" placeholder="Post URL" [(ngModel)]="postUrl">
-    <br><br>
-    <input type="checkbox" [(ngModel)]="addBackground"> Add Background
-    <br><br>
-</div>
-<div class="preview-area">
-    <img [src]="imageUrl">
-    <h1><span [class.add-background]="addBackground">{{ postTitle }}</span></h1>
-    <p>{{ postDetails }}</p>
-    <a [href]="postUrl" target="_blank" [style.display]="postUrl ? 'block' : 'none'">More Details</a>
-</div>
+<p>{{ postArray }}</p>
+<ul>
+    <li>{{ postArray[0] }}</li>    
+    <li>{{ postArray[1] }}</li>    
+    <li>{{ postArray[2] }}</li>    
+    <li>{{ postArray[3] }}</li>    
+    <li>{{ postArray[4] }}</li>    
+</ul>
+
+<ul>
+    <li *ngFor="let post of postArray">{{ post }}</li>
+</ul>
