@@ -1,16 +1,14 @@
-<h1 [class.text-red]="bool">Angular app</h1>
-<h1 [style.color]="bool ? 'red' : 'blue'">Style Binding</h1>
-
-<!-- event binding -->
-<button (click)="buttonClick()">click me</button>
-
-<!-- two way data binding -->
-<!-- <input type="text" (keyup.enter)="onKeyup(username.value)" #username> -->
-
-<input type="text" [(ngModel)]="userName" (keyup.enter)="onKeyup()">
-
-<!-- one way vs two way data binding -->
-<input type="text" [value]="textValue" (keyup.enter)="onKeyup()">
-
-<input type="text" [(ngModel)]="textValue" (keyup.enter)="onKeyup()">
-
+<div class="form-area">
+    <h1>Post Form</h1>
+    <br><br>
+    <input type="text" placeholder="Post Title" [(ngModel)]="postTitle">
+    <br><br>
+    <textarea cols="30" rows="10" placeholder="Post Details" [(ngModel)]="postDetails"></textarea>
+    <br><br>
+    <input type="text" placeholder="Post Image URL" [(ngModel)]="imageUrl">
+    <br><br>
+    <input type="text" placeholder="Post URL" [(ngModel)]="postUrl">
+    <br><br>
+    <input type="checkbox" [(ngModel)]="addBackground"> Add Background
+    <br><br>
+</div>

@@ -7,16 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'ang-intro';
-  bool: boolean = true;
-  userName: string | undefined;
-  textValue: string = 'Value coming from the component';
-
-  buttonClick() {
-    console.log('Button click event worked');
-  }
-
-  onKeyup() {
-    console.log(this.textValue);
-  }
+  postTitle: string | undefined;
+  postDetails: string | undefined;
+  imageUrl: string | undefined;
+  postUrl: string | undefined;
+  addBackground: boolean | undefined;
 }
