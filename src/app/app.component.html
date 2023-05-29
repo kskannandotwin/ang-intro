@@ -12,3 +12,9 @@
     <input type="checkbox" [(ngModel)]="addBackground"> Add Background
     <br><br>
 </div>
+<div class="preview-area">
+    <img [src]="imageUrl">
+    <h1><span [class.add-background]="addBackground">{{ postTitle }}</span></h1>
+    <p>{{ postDetails }}</p>
+    <a [href]="postUrl" target="_blank" [style.display]="postUrl ? 'block' : 'none'">More Details</a>
+</div>
