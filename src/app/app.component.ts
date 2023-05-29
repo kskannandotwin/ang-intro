@@ -7,16 +7,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'ang-intro';
-  bool: boolean = true;
-  userName: string | undefined;
-  textValue: string = 'Value coming from the component';
+  mainTitle = 'ang-intro';
 
-  buttonClick() {
-    console.log('Button click event worked');
+  postTitle: string = '';
+  postDetail: string = '';
+  imgDetail: string = '';
+  // https://smaller-pictures.appspot.com/images/dreamstime_xxl_65780868_small.jpg
+  linkDetail: string = '';
+  isInput: boolean = false;
+  isChecked: boolean = false;
+
+  onKeyup($event: any) {    
+    this.isInput = true;
   }
 
-  onKeyup() {
-    console.log(this.textValue);
-  }
 }

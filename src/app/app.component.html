@@ -1,16 +1,28 @@
-<h1 [class.text-red]="bool">Angular app</h1>
-<h1 [style.color]="bool ? 'red' : 'blue'">Style Binding</h1>
+<div class="center">
+    <h3>Post Form</h3>
+    <p>
+        <input type="text" [(ngModel)]="postTitle" [value]="postTitle" placeholder="Post title">
+    </p>
+    <p>
+        <textarea cols="30" rows="10" [(ngModel)]="postDetail" [value]="postDetail"
+            placeholder="Post detail"></textarea>
+    </p>
+    <p>
+        <input type="text" [(ngModel)]="imgDetail" [value]="imgDetail" placeholder="Image detail">
+    </p>
+    <p>
+        <input type="text" [value]="linkDetail" [(ngModel)]="linkDetail" (keyup)="onKeyup($event)"
+            placeholder="Link detail">
+    </p>
+    <p>
+        <input type="checkbox" [(ngModel)]="isChecked"><span> Add Background</span>
+    </p>
+</div>
 
-<!-- event binding -->
-<button (click)="buttonClick()">click me</button>
-
-<!-- two way data binding -->
-<!-- <input type="text" (keyup.enter)="onKeyup(username.value)" #username> -->
-
-<input type="text" [(ngModel)]="userName" (keyup.enter)="onKeyup()">
-
-<!-- one way vs two way data binding -->
-<input type="text" [value]="textValue" (keyup.enter)="onKeyup()">
-
-<input type="text" [(ngModel)]="textValue" (keyup.enter)="onKeyup()">
-
+<!-- result -->
+<div class="center">
+    <h3><span [class.yellow]="isChecked">{{ postTitle }}</span></h3>
+    <p>{{ postDetail }}</p>
+    <img [src]="imgDetail">
+    <a [class.hide]="!isInput" [href]="linkDetail" target="_blank">More info</a>
+</div>
