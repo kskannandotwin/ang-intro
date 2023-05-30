@@ -12,7 +12,10 @@
 </ul>
 
 <p>Fetching object array</p>
-
+<button (click)="addNew()">Add new data</button>
 <ul>
-    <li *ngFor="let post of objArray">{{ post.postTitle }}</li>
+    <li *ngFor="let post of objArray">
+        {{ post.postTitle }}
+        <button (click)="onDelete(post)">Delete</button>
+    </li>
 </ul>
