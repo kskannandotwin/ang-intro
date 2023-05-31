@@ -10,6 +10,8 @@ export class AppComponent {
   postArray: Array<string> = ['Post 1', 'Post 2', 'Post 3', 'Post 4', 'Post 5'];
   objArray: Array<any> = [];
 
+  stepForm: string | undefined = 'Something Else';
+
   constructor() {
     // for (let i = 0; i < this.postArray.length; i++) {
     //   console.log(this.postArray[i]);      
@@ -22,5 +24,9 @@ export class AppComponent {
 
   onDelete(index: number) {
     this.objArray.splice(index, 1);
+  }
+
+  onClick(status: string | undefined) {
+    this.stepForm = status;
   }
 }

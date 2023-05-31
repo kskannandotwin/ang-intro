@@ -14,5 +14,16 @@
 <ng-template #noData>
     <p>There is no data to fetch...</p>
 </ng-template>
-
-
+<p>ngSwitch cases</p>
+<div>
+    <button (click)="onClick('step 1')">Step 1</button>
+    <button (click)="onClick('step 2')">Step 2</button>
+    <button (click)="onClick('step 3')">Step 3</button>
+</div>
+<br>
+<div [ngSwitch]="stepForm">
+    <div *ngSwitchCase="'step 1'">Step 1 Form</div>
+    <div *ngSwitchCase="'step 2'">Step 2 Form</div>
+    <div *ngSwitchCase="'step 3'">Step 3 Form</div>
+    <div *ngSwitchDefault>Something Else</div>
+</div>
