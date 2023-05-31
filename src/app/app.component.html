@@ -14,8 +14,8 @@
 <p>Fetching object array</p>
 <button (click)="addNew()">Add new data</button>
 <ul>
-    <li *ngFor="let post of objArray">
+    <li *ngFor="let post of objArray; let i = index">
         {{ post.postTitle }}
-        <button (click)="onDelete(post)">Delete</button>
+        <button (click)="onDelete(i)">Delete</button>
     </li>
 </ul>
