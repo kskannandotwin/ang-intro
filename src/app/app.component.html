@@ -1,6 +1,3 @@
-<p>Ng style directive</p>
-<h1 [style.color]="isActive ? 'red' : 'blue'" [style.textTransform]="isActive ? 'uppercase' : 'lowercase'">Angular Udemy Course</h1>
-<h1 [ngStyle]="{
-    color: isActive ? 'red' : 'blue',
-    textTransform: isActive ? 'uppercase' : 'lowercase'
-}">NgStyle directive</h1>
+<p>Ng Class directive</p>
+<h1 [class.main]="isActive" [class.text-weight]="isActive">Angular Udemy Course</h1>
+<h1 [ngClass]="{'main' : 'isActive', 'text-weight' : 'isActive'}">NgClass Directive</h1>

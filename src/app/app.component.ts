@@ -11,7 +11,7 @@ export class AppComponent {
   objArray: Array<any> = [];
 
   stepForm: string | undefined = 'Something Else';
-  isActive: boolean = false;
+  isActive: boolean = true;
 
   constructor() {
     // for (let i = 0; i < this.postArray.length; i++) {
