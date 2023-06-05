@@ -8,13 +8,15 @@ import { PostComponent } from './post/post.component';
 import { PostListComponent } from './post-list/post-list.component';
 import { FormsModule } from '@angular/forms';
 import { AppendPipe } from './pipes/append.pipe';
+import { AppendCLIPipe } from './pipes/append-cli.pipe';
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     PostComponent,
     PostListComponent,
-    AppendPipe
+    AppendPipe,
+    AppendCLIPipe
   ],
   imports: [
     BrowserModule,
