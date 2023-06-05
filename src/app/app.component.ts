@@ -26,4 +26,10 @@ export class AppComponent {
     'post 5',
     'post 6'
   ];
+
+  userdetails = {
+    name: 'User 1',
+    city: 'Newyork',
+    countryCode: 'US'
+  }
 }
