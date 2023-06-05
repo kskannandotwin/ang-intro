@@ -10,4 +10,6 @@ export class AppComponent {
   count: number = 285645;
   dcValue: number = 3.85674;
   price: number = 99.99;
+
+  today: Date = new Date();
 }
