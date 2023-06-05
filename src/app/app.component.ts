@@ -32,4 +32,6 @@ export class AppComponent {
     city: 'Newyork',
     countryCode: 'US'
   }
+
+  dummyText: string = 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam suscipit eum aperiam quisquam adipisci unde vitae cupiditate totam ipsam iure inventore quaerat expedita sit sunt reiciendis quos, ea autem sint.'
 }
