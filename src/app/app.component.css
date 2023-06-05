@@ -1,8 +1,8 @@
-.main {
-    color: red;
-    text-transform: uppercase;
+.main-form {
+    text-align: center;
 }
 
-.text-weight {
-    font-weight: 200;
+table {
+    width: 40%;
+    margin: 0 auto;
 }
