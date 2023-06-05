@@ -17,4 +17,13 @@ export class AppComponent {
     id: 1,
     postTitle: 'Post 1'
   }
+
+  postArray: Array<string> = [
+    'post 1',
+    'post 2',
+    'post 3',
+    'post 4',
+    'post 5',
+    'post 6'
+  ];
 }
