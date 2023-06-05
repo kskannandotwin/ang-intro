@@ -12,4 +12,9 @@ export class AppComponent {
   price: number = 99.99;
 
   today: Date = new Date();
+
+  postObj: object = {
+    id: 1,
+    postTitle: 'Post 1'
+  }
 }
