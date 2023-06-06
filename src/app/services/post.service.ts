@@ -19,5 +19,6 @@ export class PostService {
 
     addPost(data: any) {
         this.postList.push(data);
+        console.log(this.postList);        
     }
 }
