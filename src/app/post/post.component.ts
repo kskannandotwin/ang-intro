@@ -1,22 +1,18 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component } from '@angular/core';
+import { PostService } from '../services/post.service';
 
 @Component({
   selector: 'app-post',
   templateUrl: './post.component.html',
-  styleUrls: ['./post.component.css']
+  styleUrls: ['./post.component.css'],
+  providers: [PostService]
 })
 export class PostComponent {
-  @Input() fromParent: string | undefined;
-  @Output() messageEvent = new EventEmitter<string>();
 
-  postParentMessage: string = 'Message coming from the post parent';
-
-  childMessage: string = 'From Child Component';
-
-  outputChildMessage: string = 'Message from child component via Output decorator';
-
-  sendMessage() {
-    console.log('Clicked');
-    this.messageEvent.emit(this.outputChildMessage);
+  posts: Array<any> = [];
+  
+  constructor(private postService: PostService){
+    // let postService = new PostService();
+    this.posts = postService.postList;
   }
 }
