@@ -3,15 +3,18 @@
         <form #f="ngForm" (submit)="onSubmit(f)">
             <div class="form-group">
                 <label>First Name</label>
-                <input type="text" placeholder="Full name" name="fullName" class="form-control" ngModel>
+                <input type="text" placeholder="Full name" class="form-control" ngModel
+                    #fullName="ngModel" name="fullName" (change)="getValue(fullName)" required>
             </div>
+            <div class="alert alert-danger" *ngIf="fullName.touched && fullName.invalid">Full name is required..</div>
             <div class="form-group">
                 <label>Email</label>
                 <input type="email" placeholder="Email" name="email" class="form-control" ngModel>
             </div>
             <div class="form-group">
                 <label>Address</label>
-                <textarea cols="30" rows="10" placeholder="Address" name="address" class="form-control" ngModel></textarea>
+                <textarea cols="30" rows="10" placeholder="Address" name="address" class="form-control"
+                    ngModel></textarea>
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>

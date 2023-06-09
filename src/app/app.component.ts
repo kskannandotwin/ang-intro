@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { FormControl, NgForm, NgModel } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -9,5 +9,9 @@ import { NgForm } from '@angular/forms';
 export class AppComponent {
   onSubmit(f: NgForm) {
     console.log(f);    
-  }  
+  }
+  
+  getValue(fullName: NgModel) {
+    console.log(fullName);
+  }
 }
