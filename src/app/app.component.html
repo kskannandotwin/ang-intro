@@ -19,7 +19,8 @@
             <div class="form-group">
                 <label>Email</label>
                 <input type="email" placeholder="Email" name="email" class="form-control" ngModel name="email"
-                    #email="ngModel" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+                    #email="ngModel" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required
+                    [ngClass]="{'is-invalid' : email.touched && email.invalid}">
             </div>
             <div *ngIf="email.errors?.['required']">
                 <div class="alert alert-danger" *ngIf="email.touched && email.invalid">Email is required.</div>
@@ -29,8 +30,9 @@
             </div>
             <div class="form-group">
                 <label>Address</label>
-                <textarea cols="30" rows="10" placeholder="Address" name="address" class="form-control"
-                    ngModel name="address" #address="ngModel" required></textarea>
+                <textarea cols="30" rows="10" placeholder="Address" name="address" class="form-control" ngModel
+                    name="address" #address="ngModel" required
+                    [ngClass]="{'is-invalid' : address.touched && address.invalid}"></textarea>
             </div>
             <div *ngIf="address.errors?.['required']">
                 <div class="alert alert-danger" *ngIf="address.touched && address.invalid">Address is required.</div>
