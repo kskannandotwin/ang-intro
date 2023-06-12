@@ -30,7 +30,10 @@
             <div class="form-group">
                 <label>Address</label>
                 <textarea cols="30" rows="10" placeholder="Address" name="address" class="form-control"
-                    ngModel></textarea>
+                    ngModel name="address" #address="ngModel" required></textarea>
+            </div>
+            <div *ngIf="address.errors?.['required']">
+                <div class="alert alert-danger" *ngIf="address.touched && address.invalid">Address is required.</div>
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
