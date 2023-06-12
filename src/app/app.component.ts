@@ -8,10 +8,11 @@ import { FormControl, NgForm, NgModel } from '@angular/forms';
 })
 export class AppComponent {
   onSubmit(f: NgForm) {
-    console.log(f);    
+    console.log(f);
+    console.log(f.value);    
   }
   
   getValue(fullName: NgModel) {
-    console.log(fullName);
+    console.log(fullName);    
   }
 }
