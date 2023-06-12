@@ -5,9 +5,16 @@
                 <label>First Name</label>
                 <input type="text" placeholder="Full name" class="form-control" ngModel #fullName="ngModel"
                     name="fullName" (change)="getValue(fullName)" required
-                    [ngClass]="{'is-invalid' : fullName.touched && fullName.invalid}">
+                    [ngClass]="{'is-invalid' : fullName.touched && fullName.invalid}" minlength="5" maxlength="10">
             </div>
-            <div class="alert alert-danger" *ngIf="fullName.touched && fullName.invalid">Full name is required..</div>
+            <div *ngIf="fullName.errors?.['required']">
+                <div class="alert alert-danger" *ngIf="fullName.touched && fullName.invalid">Full name is required.
+                </div>
+            </div>
+            <div *ngIf="fullName.errors?.['minlength']">
+                <div class="alert alert-danger" *ngIf="fullName.touched && fullName.invalid">Full name must be atleast 5 characters long.
+                </div>
+            </div>
             <div class="form-group">
                 <label>Email</label>
                 <input type="email" placeholder="Email" name="email" class="form-control" ngModel>
