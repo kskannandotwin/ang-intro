@@ -12,12 +12,20 @@
                 </div>
             </div>
             <div *ngIf="fullName.errors?.['minlength']">
-                <div class="alert alert-danger" *ngIf="fullName.touched && fullName.invalid">Full name must be atleast 5 characters long.
+                <div class="alert alert-danger" *ngIf="fullName.touched && fullName.invalid">Full name must be atleast 5
+                    characters long.
                 </div>
             </div>
             <div class="form-group">
                 <label>Email</label>
-                <input type="email" placeholder="Email" name="email" class="form-control" ngModel>
+                <input type="email" placeholder="Email" name="email" class="form-control" ngModel name="email"
+                    #email="ngModel" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+            </div>
+            <div *ngIf="email.errors?.['required']">
+                <div class="alert alert-danger" *ngIf="email.touched && email.invalid">Email is required.</div>
+            </div>
+            <div *ngIf="email.errors?.['pattern']">
+                <div class="alert alert-danger" *ngIf="email.touched && email.invalid">Invalid email address.</div>
             </div>
             <div class="form-group">
                 <label>Address</label>
