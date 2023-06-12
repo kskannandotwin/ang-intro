@@ -37,7 +37,7 @@
             <div *ngIf="address.errors?.['required']">
                 <div class="alert alert-danger" *ngIf="address.touched && address.invalid">Address is required.</div>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary" [disabled]="f.invalid">Submit</button>
         </form>
     </div>
 </div>
