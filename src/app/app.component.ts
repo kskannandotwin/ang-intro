@@ -12,7 +12,7 @@ export class AppComponent {
 
   constructor() {
     this.form = new FormGroup({
-      fullName: new FormControl('', [Validators.required]),
+      fullName: new FormControl('', Validators.required),
       email: new FormControl(),
       address: new FormControl()
     });
