@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup, NgForm, NgModel } from '@angular/forms';
+import { FormControl, FormGroup, NgForm, NgModel, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -12,18 +12,22 @@ export class AppComponent {
 
   constructor() {
     this.form = new FormGroup({
-      fullName: new FormControl(),
+      fullName: new FormControl('', [Validators.required]),
       email: new FormControl(),
       address: new FormControl()
     });
   }
 
+  get fullname() {
+    return this.form.get('fullName');
+  }
+
   onSubmit(f: NgForm) {
     console.log(f);
-    console.log(f.value);    
+    console.log(f.value);
   }
-  
+
   getValue(fullName: NgModel) {
-    console.log(fullName);    
+    console.log(fullName);
   }
 }
