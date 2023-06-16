@@ -38,12 +38,7 @@ export class AppComponent {
     return this.form.get('address');
   }
 
-  onSubmit(f: NgForm) {
-    console.log(f);
-    console.log(f.value);
-  }
-
-  getValue(fullName: NgModel) {
-    console.log(fullName);
-  }
+  onSubmit() {    
+    console.log(this.form.value);
+  }  
 }

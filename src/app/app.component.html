@@ -1,11 +1,11 @@
 <div class="container mt-5">
     <div class="form-area">
         <h1>Template driven form</h1>
-        <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+        <form #f="ngForm">
             <div class="form-group">
                 <label>First Name</label>
                 <input type="text" placeholder="Full name" class="form-control" ngModel #fullName="ngModel"
-                    name="fullName" (change)="getValue(fullName)" required
+                    name="fullName" required
                     [ngClass]="{'is-invalid' : fullName.touched && fullName.invalid}" minlength="5" maxlength="10">
             </div>
             <div *ngIf="fullName.errors?.['required']">
@@ -42,7 +42,7 @@
         </form>
         <br>
         <h1>Reactive form</h1>
-        <form [formGroup]="form">
+        <form [formGroup]="form" (ngSubmit)="onSubmit()">
             <div class="form-group">
                 <label>Full Name</label>
                 <input type="text" placeholder="Full name" class="form-control" name="fullName"
@@ -67,7 +67,8 @@
                     formControlName="address"></textarea>
             </div>
             <div class="alert alert-danger" *ngIf="Address.invalid && Address.touched">Address is required.</div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+
+            <button type="submit" class="btn btn-primary" [disabled]="form.invalid">Submit</button>
         </form>
     </div>
 </div>
