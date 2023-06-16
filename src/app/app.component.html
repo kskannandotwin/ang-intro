@@ -48,20 +48,25 @@
                 <input type="text" placeholder="Full name" class="form-control" name="fullName"
                     formControlName="fullName">
             </div>
-            <div class="alert alert-danger" *ngIf="fullname.invalid && fullname.touched">
-                <div *ngIf="fullname.errors?.['required']">The full name is required.</div>
-                <div *ngIf="fullname.errors?.['minlength']">The full name must be 5 characters long.</div>
+            <div class="alert alert-danger" *ngIf="Fullname.invalid && Fullname.touched">
+                <div *ngIf="Fullname.errors?.['required']">The full name is required.</div>
+                <div *ngIf="Fullname.errors?.['minlength']">The full name must be 5 characters long.</div>
             </div>
 
             <div class="form-group">
                 <label>Email</label>
                 <input type="email" placeholder="Email" class="form-control" name="email" formControlName="email">
             </div>
+            <div class="alert alert-danger" *ngIf="Email.invalid && Email.touched">
+                <div *ngIf="Email.errors?.['required']">Email is required.</div>
+                <div *ngIf="Email.errors?.email">Invalid email.</div>
+            </div>
             <div class="form-group">
                 <label>Address</label>
                 <textarea cols="30" rows="10" placeholder="Address" class="form-control" name="address"
                     formControlName="address"></textarea>
             </div>
+            <div class="alert alert-danger" *ngIf="Address.invalid && Address.touched">Address is required.</div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
     </div>
